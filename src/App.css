@@ -1,38 +1,113 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background-color: #76b157;
+}
+main {
+  padding: 50px 0;
+  background: #fff;
+  max-width: 40%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+header {
+  background: #a29dda;
+  color: #fff;
   text-align: center;
+  padding: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.05);
+  height: 5vh;
+  line-height: 5vh;
+  font-size: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.textView {
+  padding: 50px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  outline: none;
+  height: 30vh;
+}
+.functionButton {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f4f6f9;
+  padding: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.5s;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background: none;
+  color: chocolate;
+  border: 2px solid chocolate;
+  transition: 0.5s;
+}
+button i {
+  font-style: normal;
+  font-weight: bold;
+}
+button span {
+  display: none;
+  transition: 0.5s;
+  position: relative;
+  text-transform: capitalize;
+  width: 150px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 10;
+}
+button span::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 10px;
+  background: black;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+}
+button:hover span {
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+}
+button:hover span::after {
+  opacity: 1;
+}
+h3 {
+  margin-top: 50px;
+  font-weight: 500;
+  word-spacing: 5px;
 }
